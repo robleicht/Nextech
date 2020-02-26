@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nextech.Domain", "Nextech.Domain\Nextech.Domain.csproj", "{3E256545-F8EB-44AA-BA62-F762DB2E0FE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nextech.Adapters", "Adapters\Nextech.Adapters.csproj", "{E478E299-A8E8-4115-AC8E-2557A2B330B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularNexTechAssesment", "Nextech.Client\AngularNexTechAssesment.csproj", "{33014E64-BA16-4063-9595-CF9FC7041CAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E256545-F8EB-44AA-BA62-F762DB2E0FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E256545-F8EB-44AA-BA62-F762DB2E0FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E256545-F8EB-44AA-BA62-F762DB2E0FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E256545-F8EB-44AA-BA62-F762DB2E0FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E478E299-A8E8-4115-AC8E-2557A2B330B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E478E299-A8E8-4115-AC8E-2557A2B330B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E478E299-A8E8-4115-AC8E-2557A2B330B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E478E299-A8E8-4115-AC8E-2557A2B330B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33014E64-BA16-4063-9595-CF9FC7041CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33014E64-BA16-4063-9595-CF9FC7041CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33014E64-BA16-4063-9595-CF9FC7041CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33014E64-BA16-4063-9595-CF9FC7041CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41F67F97-68FC-44E0-9612-8556A4B98FDA}
+	EndGlobalSection
+EndGlobal

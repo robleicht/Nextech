@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+  <h2><b>Hacker News Newest Stories</b></h2>
+</div>
+<div style="text-align: center;">
+  Search By Title/Author: 
+  <input (keyup)="searchHackerNews($event)"/>
+</div>
+<br>
+<br>
+<div class="row">
+  <div class="col-6 col-sm-6 col-md-6 col-lg-6" *ngFor="let story of filteredStories; let i = index">
+    <div style="margin-top: 25px; margin-left: 25px;">
+      <div *ngIf="!story.url"><strong>{{i + 1}}: {{story.title}}</strong></div>
+      <div *ngIf="story.url"><strong>{{i + 1}}: <a href="{{story.url}}">{{story.title}}</a></strong></div>
+      &nbsp;&nbsp;&nbsp;&nbsp;By: {{story.author}}
+    </div>
+  </div>
+</div>

@@ -13,48 +13,47 @@ namespace Adapters
         {
             try
             {
-                HttpResponseMessage response = await client.GetAsync(basePath + "askstories.json?print=pretty");
-                if (response.IsSuccessStatusCode)
+                using (HttpResponseMessage response = await client.GetAsync(basePath + "askstories.json?print=pretty"))
                 {
-                    var result = await response.Content.ReadAsAsync<List<int>>();
-                    response.Dispose();
-                    return result; 
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var result = await response.Content.ReadAsAsync<List<int>>();
+                        return result;
+                    }
+                    else
+                    {
+                        throw new HttpRequestException("Hacker News is not responding at this time");
+                    }
                 }
-                else
-                {
-                    response.Dispose();
-                    throw new HttpRequestException("Hacker News is not responding at this time");
-                }
+
             }
             catch
             {
                 throw new HttpRequestException("Hacker News is not responding at this time");
             }
-
-
         }
 
         public async Task<Story> GetByID(int storyID)
         {
             try
             {
-                HttpResponseMessage response = await client.GetAsync(basePath + $"item/{storyID}.json?print=pretty");
-                if (response.IsSuccessStatusCode)
+                using (HttpResponseMessage response = await client.GetAsync(basePath + $"item/{storyID}.json?print=pretty"))
                 {
-                    return await response.Content.ReadAsAsync<Story>(); ;
-                }
-                else
-                {
-                    response.Dispose();
-                    throw new HttpRequestException("Hacker News is not responding at this time");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return await response.Content.ReadAsAsync<Story>(); ;
+                    }
+                    else
+                    {
+                        throw new HttpRequestException("Hacker News is not responding at this time");
+                    }
                 }
             }
             catch
             {
                 throw new HttpRequestException("Hacker News is not responding at this time");
             }
-
-
+        
         }
     }
 }
